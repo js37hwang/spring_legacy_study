@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>지역별 최대 판매량 조회</title>
+
+  <link rel="stylesheet" href="./css/mainStyle.css" />
+</head>
+
+<body>
+  <div class="container">
+
+    <h1 class="title">지역별 최대 판매량 조회</h1>
+
+    <p class="sub-title">
+      지역 ID와 상품명을 입력하세요
+    </p>
+
+    <div class="search-area">
+
+      <input
+        type="text"
+        id="regionId"
+        class="search-input"
+        placeholder="지역 ID 입력"
+      />
+
+      <input
+        type="text"
+        id="productgroup"
+        class="search-input"
+        placeholder="상품명 입력"
+      />
+
+      <button class="search-btn" onclick="searchMaxQty()">
+        조회하기
+      </button>
+
+    </div>
+
+    <div class="result-box">
+      <div id="result" class="result-text">
+        조회 결과가 여기에 표시됩니다.
+      </div>
+    </div>
+
+  </div>
+
+  <script src="./js/mainScript.js"></script>
+</body>
+</html>

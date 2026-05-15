@@ -6,18 +6,24 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd
 		http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.3.xsd">
-	
+
+
 	<mvc:annotation-driven />
-	
-	<context:component-scan base-package="com.kopo.jshwang0512" />
-	
+
+	<context:component-scan base-package="com.kopo.hkcode.prac" />
+
 	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-	
 		<property name="prefix" value="/WEB-INF/views/" />
 		<property name="suffix" value=".jsp" />
-	
 	</bean>
+
+	<import resource="beans_prac.xml" />
 	
-	<import	resource="beans.xml" />
+	<mvc:cors>
+	    <mvc:mapping path="/**" 
+                 allowed-origins="*" 
+                 allowed-methods="GET, POST, PUT, DELETE, OPTIONS" 
+                 allowed-headers="*" />
+	</mvc:cors>
 
 </beans>

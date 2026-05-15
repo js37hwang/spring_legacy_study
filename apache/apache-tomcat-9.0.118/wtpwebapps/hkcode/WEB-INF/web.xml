@@ -22,6 +22,22 @@
 	  <servlet-name>appServlet</servlet-name>
 	  <url-pattern>/</url-pattern>
 	</servlet-mapping>  
+	
+	
+	<servlet>
+	  <servlet-name>pracServlet</servlet-name>
+	  <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+	  <init-param>
+	    <param-name>contextConfigLocation</param-name>
+	    <param-value>/WEB-INF/spring/servlet-context-prac.xml</param-value>
+	  </init-param>
+	  <load-on-startup>2</load-on-startup>
+	</servlet>
+
+	<servlet-mapping>
+	  <servlet-name>pracServlet</servlet-name>
+	  <url-pattern>*.prac</url-pattern>
+	</servlet-mapping> 
   
   
 </web-app>
